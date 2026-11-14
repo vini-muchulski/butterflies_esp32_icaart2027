@@ -1,6 +1,6 @@
 # Empirical results
 
-This directory contains the recorded evidence supporting the MobileNetV2 and MobileViT-XXS comparison on Butterflies-Austria-20. Existing reports were copied without modifying their values. Training and initial-conversion records were extracted from saved notebook outputs, without executing cells or recomputing metrics.
+This directory contains the empirical evidence supporting the MobileNetV2 and MobileViT-XXS comparison on Butterflies-Austria-20: training logs, conversion records, structural-configuration comparisons, paired predictions, and ESP32-S3 measurements. Training and initial-conversion records retain the textual outputs stored in the experiment notebooks.
 
 Structural recovery results are exploratory: configuration selection used validation accuracy, but the test partition had already been inspected. Statistical tests on these predictions do not provide an independent confirmation.
 
@@ -13,7 +13,7 @@ Structural recovery results are exploratory: configuration selection used valida
 | [quantization/mobilenetv2_average_pool/](quantization/mobilenetv2_average_pool/) | Saved explicit-pooling export and host-side resolver comparison outputs. | [Average-pool export](../notebooks/02_export/mobilenetv2/mobilenetv2_average_pool_export.ipynb) |
 | [quantization/mobilevit_g8_4_4/](quantization/mobilevit_g8_4_4/) | Initial grouped-recovery reports, activation statistics, grouping, calibration manifest, FP32 comparison, and TFLite inspection. | [Grouped export verification](../notebooks/02_export/mobilevit_xxs/mobilevit_xxs_grouped_export_verification.ipynb) |
 | [structural_comparison/](structural_comparison/) | Full comparison of 17 configurations, shared diagnostics, per-variant records, selection, and selected test reports. | [Configuration comparison](../notebooks/03_structural_comparison/mobilevit_xxs_structural_comparison.ipynb) |
-| [block7_extension/](block7_extension/) | Earlier block-7 extension experiment, retained separately from the 17-configuration comparison. | The original block-7 notebook is identified by the provenance paths; it is not included in the current notebook selection. |
+| [block7_extension/](block7_extension/) | Block-7 extension experiment, separate from the 17-configuration comparison. | — |
 | [diagnostics/](diagnostics/) | Saved tables underlying activation, weight, grouping, recovery, and block-7 plots. | [Article figures](../notebooks/05_figures/generate_article_figures.ipynb) |
 | [statistical_analysis/](statistical_analysis/) | Individual paired predictions, model accuracies, exact McNemar tests, bootstrap intervals, Holm adjustments, and experiment summary. | [Paired analysis](../notebooks/04_statistical_analysis/paired_statistical_analysis.ipynb) |
 | [esp32s3/](esp32s3/) | Three device runs with predictions, telemetry, classification reports, confusion matrices, model identity, and timing/memory summaries. | See the [device-results guide](esp32s3/README.md). |
@@ -56,7 +56,7 @@ The paired-analysis accuracy source is [model_accuracy.csv](statistical_analysis
 - Initial conversion: [MobileNetV2](quantization/initial/mobilenetv2/recorded_outputs.json), [MobileViT-XXS](quantization/initial/mobilevit_xxs/recorded_outputs.json).
 - Explicit average-pool export: [MobileNetV2](quantization/mobilenetv2_average_pool/recorded_outputs.json).
 
-Each extracted file retains saved stream output, textual/JSON display data, execution counts, and zero-based cell/output indices. It records the source notebook and its SHA-256. Images and widget payloads were omitted from these extracts; exported figures are organized separately. No numerical values were inferred from plots or recalculated. These files are historical execution records, not new runs in this repository.
+Each extracted file retains saved stream output, textual/JSON display data, execution counts, and zero-based cell/output indices. It identifies the experiment notebook by its path and SHA-256. These textual extracts exclude image and widget payloads; figures are presented in the [figure gallery](../figures/README.md). Numerical values are retained from the recorded outputs rather than inferred from plots.
 
 ## Interpretation and units
 
@@ -68,8 +68,8 @@ Each extracted file retains saved stream output, textual/JSON display data, exec
 - Device timing fields ending in `_us` are microseconds. Published inference times refer to the device's model invocation, not HTTP round-trip time or end-to-end image classification. Device memory summaries distinguish tensor-arena use from other memory fields; arena use is not total peak RAM.
 - McNemar p-values adjusted with Holm and unadjusted marginal bootstrap intervals answer different inferential questions. Lack of statistical significance does not establish equivalence.
 
-## Provenance and scope
+## Provenance
 
-[provenance.csv](provenance.csv) covers every empirical file in this directory, excluding documentation and the manifest itself. It records the source path relative to the original workspace, destination relative to this repository, source and destination SHA-256 hashes, destination size, and operation. `copy_unchanged` files have identical source/destination hashes. `extract_saved_text_outputs` files record the source cell indices and have their own destination hashes.
+[provenance.csv](provenance.csv) covers every empirical file in this directory, excluding documentation and the manifest itself. It records experimental source identifiers, result-file locations, SHA-256 hashes, byte sizes, and extraction metadata. Notebook-output extracts also identify the source cell indices.
 
-Original workspace paths, model names, run IDs, and field names inside raw reports are preserved for traceability. They are not portable input paths or instructions to contact the recorded device address. Checkpoints, TFLite model binaries, firmware builds, caches, and the partial intermediate comparison summary are outside this copy stage.
+Paths, model names, run IDs, and field names inside raw reports identify the experiment environment and artifacts. Recorded paths and device addresses are metadata, not portable execution settings. Use the model hashes to distinguish artifacts and configure local paths before running the corresponding analyses.

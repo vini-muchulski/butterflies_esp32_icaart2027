@@ -1,6 +1,6 @@
 # ESP32-S3 evaluation records
 
-Each directory below contains one recorded evaluation of 648 test tensors on the ESP32-S3. Model names identify different artifacts; run IDs preserve the original execution identifiers.
+Each directory below contains one recorded evaluation of 648 test tensors on the ESP32-S3. Model names identify different artifacts, and run IDs identify the corresponding executions.
 
 | Model | Run and raw summary | Correct / samples | Accuracy | Mean model invocation | Arena used / reserved (bytes) |
 |---|---|---:|---:|---:|---:|
@@ -20,7 +20,7 @@ The displayed values summarize the stored `summary.json` fields `correct`, `samp
 - `confusion_matrix.csv`: numerical confusion matrix.
 - `terminal.txt`: saved terminal output.
 
-The three original confusion-matrix images are in [../../figures/esp32s3/](../../figures/esp32s3/).
+The three device confusion-matrix images are in [../../figures/esp32s3/](../../figures/esp32s3/).
 
 ## Measurement boundary
 
@@ -28,6 +28,4 @@ The host prepared model-specific image inputs and transmitted quantized NCHW INT
 
 Arena occupancy measures only the tensors' arena allocation. It is not total firmware RAM or peak memory. The three graphs also differ in input resolution and operator composition; these records do not isolate a single architectural cause of the latency difference.
 
-The model SHA-256 values recorded in each summary identify the deployed files. The binaries are not included in this stage. Saved host paths and device addresses describe the original experiment environment.
-
-All files were copied unchanged. No device evaluation was rerun.
+The model SHA-256 values recorded in each summary identify the exact deployed files and support artifact-integrity checks. Recorded host paths and device addresses describe the experiment environment.

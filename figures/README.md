@@ -1,8 +1,8 @@
 # Empirical figures
 
-These are existing experiment figures copied into a categorized layout. They were not regenerated, edited, or recomputed. PNG files can be viewed below; PDF versions are included where they existed in the source directories.
+This gallery presents dataset examples, training curves, test predictions, quantization diagnostics, structural comparisons, paired statistical analyses, and ESP32-S3 confusion matrices. Figures are available as PNG files and, where provided, PDF files.
 
-[catalog.csv](catalog.csv) maps every PNG to its related notebook/script and result records. [provenance.csv](provenance.csv) records every copied PNG/PDF, its original workspace path, current path, byte size, and SHA-256. Renamed files retain the original image bytes and labels.
+[catalog.csv](catalog.csv) maps every PNG to its related notebook/script and result records. [provenance.csv](provenance.csv) identifies every PNG/PDF by its experimental source, file location, byte size, and SHA-256.
 
 ## Dataset and baseline examples
 
@@ -50,7 +50,7 @@ The control labeled `Original full INT8` is the stratified, ungrouped MobileViT-
 
 Related data: [expansion-weight statistics](../results/diagnostics/expansion_weight_channel_statistics.csv) and [weight--activation correlations](../results/diagnostics/weight_activation_correlations_by_block.csv). The latter describes association, not causality.
 
-Additional diagnostic PNG/PDF files in [quantization/](quantization/) retain scale ratios, channel-level utilization, low-resolution channel fractions, group partitions for blocks 1/2/5, the combined diagnosis panel, and the earlier grouping-only recovery figure. Historical labels such as `codes` refer to quantization levels, not memory or image counts. The initial-grouping plot and the selected-configuration comparison represent different stages and should not be merged as if they were a single evaluation.
+Additional diagnostic PNG/PDF files in [quantization/](quantization/) show scale ratios, channel-level utilization, low-resolution channel fractions, group partitions for blocks 1/2/5, the combined diagnosis panel, and the initial grouping-only recovery figure. In plot labels, `codes` refers to quantization levels, not memory or image counts. The initial-grouping plot and the selected-configuration comparison represent different experimental stages and should not be interpreted as a single evaluation.
 
 ## Structural configuration comparison
 
@@ -78,4 +78,4 @@ Further figures in [statistical_analysis/](statistical_analysis/) show accuracy 
 |---|---|---|
 | ![MobileNetV2 device confusion matrix](esp32s3/mobilenetv2_confusion_matrix.png) | ![MobileViT grouped device confusion matrix](esp32s3/mobilevit_g8_4_4_confusion_matrix.png) | ![MobileViT extended-grouping device confusion matrix](esp32s3/mobilevit_g8_4_4_b3_g4_confusion_matrix.png) |
 
-These confusion matrices use predictions returned by the microcontroller. Raw predictions, invocation-time distributions, memory statistics, and deployed model hashes are linked in the [device-results guide](../results/esp32s3/README.md). No new latency or memory plot was generated in this stage.
+These confusion matrices use predictions returned by the microcontroller. Raw predictions, invocation-time distributions, memory statistics, and deployed model hashes are linked in the [device-results guide](../results/esp32s3/README.md).

@@ -17,15 +17,19 @@ This directory collects the experiment notebooks supporting the comparison of pr
 
 [Separate activation-diagnosis panels](05_figures/regenerate_activation_scale_diagnosis.py) is a companion Python script. It reads saved tables and generates the two activation-diagnosis panels without loading models or recalibrating.
 
-## Current assembly status
+## Execution requirements
 
-The files use descriptive English names; their contents remain unchanged, including stored outputs, execution counts, and metadata. [provenance.csv](provenance.csv) records the original workspace paths, destination paths relative to this directory, file sizes, and full SHA-256 hashes. Source paths document the original workspace layout; they are not dependencies to retrieve from this repository.
+Configure dataset, checkpoint, model, and output paths in the setup cells before execution. The notebooks contain environment-specific absolute paths and directory searches; verify both input locations and result destinations for your environment.
 
-The copies have not been executed or adapted to this directory layout. Existing absolute paths, directory searches, and output locations may still refer to the original workspace. Review and adapt these paths before executing any cells, including paths that write results. Notebook outputs are historical records, not evidence of a new run in this repository.
+Training requires the Butterflies-Austria-20 training, validation, and test partitions. Export and structural-comparison experiments require the relevant trained checkpoints, including `best__model.pt` and `best_mobilevit_xx_small_v0.pt`. Analysis notebooks require the corresponding TFLite models and experiment records. Follow the model-specific preprocessing implemented in each notebook.
 
-Dataset files, checkpoints, exported models, result tables, and firmware have not been copied in this stage. Consequently, this directory is not yet a self-contained reproduction package. Checkpoints referenced by the notebooks include `best__model.pt` and `best_mobilevit_xx_small_v0.pt`. Analysis notebooks also require exported models and saved results from the corresponding experiments.
+The companion plotting script reads `tables/block_activation_summary.csv` and `tables/estimated_effective_levels_summary.csv` relative to its own directory. The data tables are available as [block_activation_summary.csv](../results/diagnostics/block_activation_summary.csv) and [estimated_effective_levels_summary.csv](../results/diagnostics/estimated_effective_levels_summary.csv); place them at the script's expected locations before running it.
 
-The companion plotting script expects `tables/block_activation_summary.csv` and `tables/estimated_effective_levels_summary.csv` alongside it. Those tables are not included yet.
+## Experiment records
+
+Stored outputs, execution counts, and metadata document the recorded experiments. [provenance.csv](provenance.csv) lists experimental source identifiers, reference file sizes, and reference SHA-256 hashes identifying the source versions associated with those records.
+
+Results are indexed in [../results/README.md](../results/README.md), and figures are presented in [../figures/README.md](../figures/README.md). Inspecting these records does not require rerunning training, export, or inference.
 
 ## Interpretation
 
@@ -34,4 +38,3 @@ The companion plotting script expects `tables/block_activation_summary.csv` and 
 - Selection uses validation accuracy, but the test partition had already been inspected. Recovery results remain exploratory; paired statistical tests do not provide an independent confirmation.
 - Host-side LiteRT predictions and ESP32-S3 predictions must be reported separately. Export compatibility checks in notebooks are not a replacement for device execution measurements.
 
-The next preparation step is to supply the required inputs and adapt paths in these copies. Training, export, and evaluation should only be rerun deliberately; viewing the stored notebook outputs requires no new experiment.
