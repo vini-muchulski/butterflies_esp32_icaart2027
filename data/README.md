@@ -1,6 +1,6 @@
 # Butterflies-Austria-20
 
-The dataset contains 6,479 images across 20 classes. It is available from [Kaggle, version 8702901](https://www.kaggle.com/dsv/8702901), published by Christian Menard in 2024 ([DOI](https://doi.org/10.34740/KAGGLE/DSV/8702901)). Dataset images are not included in this repository.
+The dataset contains 6,479 images across 20 classes. It is available from [Kaggle, version 8702901](https://www.kaggle.com/dsv/8702901). Dataset images are not included in this repository.
 
 ## Partitions
 
