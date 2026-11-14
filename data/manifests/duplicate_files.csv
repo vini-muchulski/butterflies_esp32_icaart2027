@@ -1,0 +1,5 @@
+duplicate_group,split,relative_path,sha256,group_size
+0,train,train/Zerynthia_Polyxena/images166.jpg,8fb85e8f0111d3e7429ed97b79f0c5f8a432f0062e1d5cc11ab33821a172d68e,2
+0,train,train/Zerynthia_Polyxena/images345.jpg,8fb85e8f0111d3e7429ed97b79f0c5f8a432f0062e1d5cc11ab33821a172d68e,2
+1,train,train/Vanessa_Cardui/images3213.jpg,f4462f6f2ee058b4c994bea5afe2e3188d884f1e62599a1c6d74af1335269f2a,2
+1,train,train/Vanessa_Cardui/images33331.jpg,f4462f6f2ee058b4c994bea5afe2e3188d884f1e62599a1c6d74af1335269f2a,2

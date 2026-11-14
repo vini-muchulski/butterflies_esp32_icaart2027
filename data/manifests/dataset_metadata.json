@@ -1,0 +1,100 @@
+{
+  "dataset": {
+    "title": "Butterflies-Austria-20",
+    "author": "Christian Menard",
+    "year": 2024,
+    "doi": "10.34740/KAGGLE/DSV/8702901",
+    "version_url": "https://www.kaggle.com/dsv/8702901",
+    "landing_page": "https://www.kaggle.com/datasets/chris565/butterflies-austria-20",
+    "processed_images": 6479,
+    "classes": 20,
+    "file_extensions": [
+      ".jpg"
+    ],
+    "data_distribution": "This repository contains manifests and experimental metadata, not the image dataset. Dataset terms and image rights are governed by the dataset publisher."
+  },
+  "path_convention": "relative_path is relative to the dataset root; sample_id is relative to its split directory. Paths use forward slashes.",
+  "class_index_convention": "Zero-based index in lexicographically sorted class directory names, matching ImageFolder.",
+  "sample_order": "Within each split, classes and image paths are sorted lexicographically. split_index is zero-based.",
+  "partition": {
+    "seed": 42,
+    "stratified": true,
+    "proportions": {
+      "train": 0.8,
+      "val": 0.1,
+      "test": 0.1
+    },
+    "counts": {
+      "train": 5183,
+      "val": 648,
+      "test": 648
+    },
+    "procedure": "Sort classes and source image paths; sklearn.model_selection.train_test_split separates a stratified 20% remainder, then divides that remainder equally into val and test with random_state=42 in both calls.",
+    "reproduction_authority": "The per-image split manifests define exact membership; a new random split does not replace them."
+  },
+  "calibration": {
+    "initial_export": {
+      "images": 100,
+      "source_split": "train",
+      "replacement": false,
+      "seed": 42,
+      "sampler": "torch.randperm(len(calibration_dataset), generator=torch.Generator().manual_seed(42))[:100]",
+      "dataset_order": "ImageFolder order of train.csv",
+      "per_image_selection_record": "The initial-export notebooks did not persist the selected image paths. This protocol is recorded from their code; calibration_stratified_1000.csv describes a different calibration experiment.",
+      "notebooks": [
+        "notebooks/01_training/mobilenetv2/mobilenetv2_training.ipynb",
+        "notebooks/01_training/mobilevit_xxs/mobilevit_xxs_training.ipynb"
+      ]
+    },
+    "structural_comparison": {
+      "images": 1000,
+      "distinct_file_paths": 1000,
+      "distinct_sha256_values": 999,
+      "images_per_class": 50,
+      "source_split": "train",
+      "replacement": false,
+      "seed": 42,
+      "manifest": "calibration_stratified_1000.csv",
+      "ordering": "Recorded experiment order, not a new random selection.",
+      "source_records": [
+        "results/structural_comparison/shared/calibration_manifest.csv",
+        "results/quantization/mobilevit_g8_4_4/calibration_manifest.csv",
+        "results/block7_extension/calibration_manifest.csv"
+      ]
+    },
+    "random_augmentation": false
+  },
+  "preprocessing": {
+    "mobilenetv2": {
+      "input_size": [
+        224,
+        224
+      ],
+      "channel_order": "RGB",
+      "rescale": "uint8 pixels to [0,1]",
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "mobilevit_xxs": {
+      "resize_shorter_side": 288,
+      "crop_size": [
+        256,
+        256
+      ],
+      "evaluation_crop": "center",
+      "training_crop": "random",
+      "channel_order": "BGR",
+      "rescale": "uint8 pixels to [0,1]",
+      "mean_std_normalization": false
+    },
+    "evaluation": "Validation, test, and calibration use deterministic model-specific preprocessing without random augmentation."
+  }
+}

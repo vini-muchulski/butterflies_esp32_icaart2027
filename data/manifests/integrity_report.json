@@ -1,0 +1,26 @@
+{
+  "image_files": 6479,
+  "unique_image_paths": 6479,
+  "unique_sha256_values": 6477,
+  "classes": 20,
+  "split_counts": {
+    "train": 5183,
+    "val": 648,
+    "test": 648
+  },
+  "exact_duplicate_groups": 2,
+  "files_in_duplicate_groups": 4,
+  "cross_split_exact_duplicate_groups": 0,
+  "duplicate_group_scope": "Both duplicate groups occur within training; recorded samples are retained.",
+  "duplicate_detection": "SHA-256 of file bytes; visually similar or re-encoded images are not assessed.",
+  "local_dataset_trees_have_identical_paths_and_hashes": true,
+  "calibration_samples": 1000,
+  "calibration_samples_per_class": 50,
+  "calibration_unique_paths": 1000,
+  "calibration_unique_sha256_values": 999,
+  "calibration_is_subset_of_train": true,
+  "stratified_calibration_order_matches_grouped_recovery_and_block7_records": true,
+  "test_order_and_targets_match_paired_predictions": true,
+  "test_order_and_targets_match_all_three_device_runs": true,
+  "image_files_copied_to_repository": 0
+}
