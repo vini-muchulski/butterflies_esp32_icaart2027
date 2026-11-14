@@ -1,0 +1,6 @@
+[submodule "firmware/components/esp-nn"]
+	path = firmware/components/esp-nn
+	url = https://github.com/espressif/esp-nn.git
+[submodule "firmware/components/esp-tflite-micro"]
+	path = firmware/components/esp-tflite-micro
+	url = https://github.com/espressif/esp-tflite-micro.git

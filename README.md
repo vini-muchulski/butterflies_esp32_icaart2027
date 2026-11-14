@@ -151,3 +151,11 @@ The [device-results guide](results/esp32s3/README.md) links the three runs, incl
 | Paper figures and supplementary visualizations | [figures/](figures/README.md) |
 
 The recorded software versions are PyTorch 2.10.0+cu128, LiteRT-Torch 0.9.4, AI Edge Quantizer 0.9.0, AI Edge LiteRT 2.2.0, ESP-IDF 5.5.0, and ESP-NN v1.1.2. The notebooks document model-specific execution requirements. Results and figures can be inspected directly without running training or inference.
+
+Before building the firmware, initialize its dependencies from the repository root:
+
+```bash
+git submodule update --init --recursive
+```
+
+See the [firmware guide](firmware/README.md) for the pinned upstream runtime versions and their validation scope.
