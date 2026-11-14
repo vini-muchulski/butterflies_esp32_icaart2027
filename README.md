@@ -145,6 +145,7 @@ The [device-results guide](results/esp32s3/README.md) links the three runs, incl
 |---|---|
 | Dataset reference, partition and calibration manifests | [data/](data/README.md) |
 | Fine-tuning, conversion, grouping, statistics, and plotting notebooks | [notebooks/](notebooks/README.md) |
+| Trained checkpoints, TFLite artifacts, and model identities | [models/](models/README.md) |
 | Full empirical records and interpretation of fields and units | [results/](results/README.md) |
 | Paper figures and supplementary visualizations | [figures/](figures/README.md) |
 
