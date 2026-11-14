@@ -1,0 +1,743 @@
+{
+  "source_notebook": "butterflies_austria_edge_vision/pytorch_mobilevit_xxs/MobileVIT/MobileVIT-XXS/butterflies_austria_MobileVIT_apple_baseline_v0/butterflies_austria_MobileVIT_apple_baseline_v0.ipynb",
+  "source_sha256": "07fc5bb677df103a72dada00e30b50aeb32d95af18b7516ff86228129f9ea9dc",
+  "operation": "extract_saved_text_outputs",
+  "description": "Previously stored textual/JSON notebook outputs; no cells executed and no metrics recomputed. Image and widget payloads omitted. Cell and output indices are zero-based.",
+  "cells": [
+    {
+      "cell_index": 22,
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "name": "stdout",
+            "output_type": "stream",
+            "text": [
+              "torch.Size([1, 3, 256, 256])\n"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cell_index": 23,
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:00)</span> <span style=\"color: #008080; text-decoration-color: #008080; font-weight: bold\">[START]</span> <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">LiteRT-Torch Convert</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:00\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;36m[\u001b[0m\u001b[1;36mSTART\u001b[0m\u001b[1;36m]\u001b[0m \u001b[1;39mLiteRT-Torch Convert\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 1,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:00)</span> <span style=\"color: #008080; text-decoration-color: #008080; font-weight: bold\">[START]</span> <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">LiteRT-Torch Convert</span> &gt; <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">Torch Export: serving_default</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:00\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;36m[\u001b[0m\u001b[1;36mSTART\u001b[0m\u001b[1;36m]\u001b[0m \u001b[1;39mLiteRT-Torch Convert\u001b[0m > \u001b[1;39mTorch Export: serving_default\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 2,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:01)</span> <span style=\"color: #008080; text-decoration-color: #008080; font-weight: bold\">[START]</span> <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">LiteRT-Torch Convert</span> &gt; <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">Torch Export: serving_default</span> &gt; <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">ExportedProgram Run Decompositions</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:01\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;36m[\u001b[0m\u001b[1;36mSTART\u001b[0m\u001b[1;36m]\u001b[0m \u001b[1;39mLiteRT-Torch Convert\u001b[0m > \u001b[1;39mTorch Export: serving_default\u001b[0m > \u001b[1;39mExportedProgram Run Decompositions\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 3,
+          "output": {
+            "name": "stderr",
+            "output_type": "stream",
+            "text": [
+              "/opt/conda/lib/python3.11/copyreg.py:105: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n",
+              "  return cls.__new__(cls, *args)\n"
+            ]
+          }
+        },
+        {
+          "output_index": 4,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:03)</span> <span style=\"color: #008000; text-decoration-color: #008000; font-weight: bold\">[ DONE]</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">LiteRT-Torch Convert</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\"> &gt; </span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">Torch Export: serving_default</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\"> &gt; </span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">ExportedProgram Run Decompositions</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\">+</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">00:02</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">)</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:03\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;32m[\u001b[0m\u001b[1;32m DONE\u001b[0m\u001b[1;32m]\u001b[0m \u001b[1;2;39mLiteRT-Torch Convert\u001b[0m\u001b[2m > \u001b[0m\u001b[1;2;39mTorch Export: serving_default\u001b[0m\u001b[2m > \u001b[0m\u001b[1;2;39mExportedProgram Run Decompositions\u001b[0m \u001b[1;2m(\u001b[0m\u001b[2m+\u001b[0m\u001b[1;2;39m00:02\u001b[0m\u001b[1;2m)\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 5,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:03)</span> <span style=\"color: #008000; text-decoration-color: #008000; font-weight: bold\">[ DONE]</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">LiteRT-Torch Convert</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\"> &gt; </span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">Torch Export: serving_default</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\">+</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">00:03</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">)</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:03\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;32m[\u001b[0m\u001b[1;32m DONE\u001b[0m\u001b[1;32m]\u001b[0m \u001b[1;2;39mLiteRT-Torch Convert\u001b[0m\u001b[2m > \u001b[0m\u001b[1;2;39mTorch Export: serving_default\u001b[0m \u001b[1;2m(\u001b[0m\u001b[2m+\u001b[0m\u001b[1;2;39m00:03\u001b[0m\u001b[1;2m)\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 6,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:03)</span> <span style=\"color: #008080; text-decoration-color: #008080; font-weight: bold\">[START]</span> <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">LiteRT-Torch Convert</span> &gt; <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">Run FX Passes</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:03\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;36m[\u001b[0m\u001b[1;36mSTART\u001b[0m\u001b[1;36m]\u001b[0m \u001b[1;39mLiteRT-Torch Convert\u001b[0m > \u001b[1;39mRun FX Passes\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 7,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:03)</span> <span style=\"color: #008080; text-decoration-color: #008080; font-weight: bold\">[START]</span> <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">LiteRT-Torch Convert</span> &gt; <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">Run FX Passes</span> &gt; <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">ExportedProgram Run Decompositions</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:03\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;36m[\u001b[0m\u001b[1;36mSTART\u001b[0m\u001b[1;36m]\u001b[0m \u001b[1;39mLiteRT-Torch Convert\u001b[0m > \u001b[1;39mRun FX Passes\u001b[0m > \u001b[1;39mExportedProgram Run Decompositions\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 8,
+          "output": {
+            "name": "stderr",
+            "output_type": "stream",
+            "text": [
+              "/opt/conda/lib/python3.11/copyreg.py:105: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n",
+              "  return cls.__new__(cls, *args)\n"
+            ]
+          }
+        },
+        {
+          "output_index": 9,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:06)</span> <span style=\"color: #008000; text-decoration-color: #008000; font-weight: bold\">[ DONE]</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">LiteRT-Torch Convert</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\"> &gt; </span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">Run FX Passes</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\"> &gt; </span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">ExportedProgram Run Decompositions</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\">+</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">00:02</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">)</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:06\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;32m[\u001b[0m\u001b[1;32m DONE\u001b[0m\u001b[1;32m]\u001b[0m \u001b[1;2;39mLiteRT-Torch Convert\u001b[0m\u001b[2m > \u001b[0m\u001b[1;2;39mRun FX Passes\u001b[0m\u001b[2m > \u001b[0m\u001b[1;2;39mExportedProgram Run Decompositions\u001b[0m \u001b[1;2m(\u001b[0m\u001b[2m+\u001b[0m\u001b[1;2;39m00:02\u001b[0m\u001b[1;2m)\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 10,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:06)</span> <span style=\"color: #008000; text-decoration-color: #008000; font-weight: bold\">[ DONE]</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">LiteRT-Torch Convert</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\"> &gt; </span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">Run FX Passes</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\">+</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">00:02</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">)</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:06\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;32m[\u001b[0m\u001b[1;32m DONE\u001b[0m\u001b[1;32m]\u001b[0m \u001b[1;2;39mLiteRT-Torch Convert\u001b[0m\u001b[2m > \u001b[0m\u001b[1;2;39mRun FX Passes\u001b[0m \u001b[1;2m(\u001b[0m\u001b[2m+\u001b[0m\u001b[1;2;39m00:02\u001b[0m\u001b[1;2m)\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 11,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:06)</span> <span style=\"color: #008080; text-decoration-color: #008080; font-weight: bold\">[START]</span> <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">LiteRT-Torch Convert</span> &gt; <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">Lower to MLIR: serving_default</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:06\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;36m[\u001b[0m\u001b[1;36mSTART\u001b[0m\u001b[1;36m]\u001b[0m \u001b[1;39mLiteRT-Torch Convert\u001b[0m > \u001b[1;39mLower to MLIR: serving_default\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 12,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:06)</span> <span style=\"color: #008080; text-decoration-color: #008080; font-weight: bold\">[START]</span> <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">LiteRT-Torch Convert</span> &gt; <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">Lower to MLIR: serving_default</span> &gt; <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">ExportedProgram Run Decompositions</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:06\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;36m[\u001b[0m\u001b[1;36mSTART\u001b[0m\u001b[1;36m]\u001b[0m \u001b[1;39mLiteRT-Torch Convert\u001b[0m > \u001b[1;39mLower to MLIR: serving_default\u001b[0m > \u001b[1;39mExportedProgram Run Decompositions\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 13,
+          "output": {
+            "name": "stderr",
+            "output_type": "stream",
+            "text": [
+              "/opt/conda/lib/python3.11/copyreg.py:105: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n",
+              "  return cls.__new__(cls, *args)\n"
+            ]
+          }
+        },
+        {
+          "output_index": 14,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:10)</span> <span style=\"color: #008000; text-decoration-color: #008000; font-weight: bold\">[ DONE]</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">LiteRT-Torch Convert</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\"> &gt; </span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">Lower to MLIR: serving_default</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\"> &gt; </span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">ExportedProgram Run Decompositions</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\">+</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">00:03</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">)</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:10\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;32m[\u001b[0m\u001b[1;32m DONE\u001b[0m\u001b[1;32m]\u001b[0m \u001b[1;2;39mLiteRT-Torch Convert\u001b[0m\u001b[2m > \u001b[0m\u001b[1;2;39mLower to MLIR: serving_default\u001b[0m\u001b[2m > \u001b[0m\u001b[1;2;39mExportedProgram Run Decompositions\u001b[0m \u001b[1;2m(\u001b[0m\u001b[2m+\u001b[0m\u001b[1;2;39m00:03\u001b[0m\u001b[1;2m)\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 15,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:10)</span> <span style=\"color: #008080; text-decoration-color: #008080; font-weight: bold\">[START]</span> <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">LiteRT-Torch Convert</span> &gt; <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">Lower to MLIR: serving_default</span> &gt; <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">ExportedProgram Run Decompositions</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:10\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;36m[\u001b[0m\u001b[1;36mSTART\u001b[0m\u001b[1;36m]\u001b[0m \u001b[1;39mLiteRT-Torch Convert\u001b[0m > \u001b[1;39mLower to MLIR: serving_default\u001b[0m > \u001b[1;39mExportedProgram Run Decompositions\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 16,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:10)</span> <span style=\"color: #008000; text-decoration-color: #008000; font-weight: bold\">[ DONE]</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">LiteRT-Torch Convert</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\"> &gt; </span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">Lower to MLIR: serving_default</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\"> &gt; </span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">ExportedProgram Run Decompositions</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\">+</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">00:00</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">)</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:10\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;32m[\u001b[0m\u001b[1;32m DONE\u001b[0m\u001b[1;32m]\u001b[0m \u001b[1;2;39mLiteRT-Torch Convert\u001b[0m\u001b[2m > \u001b[0m\u001b[1;2;39mLower to MLIR: serving_default\u001b[0m\u001b[2m > \u001b[0m\u001b[1;2;39mExportedProgram Run Decompositions\u001b[0m \u001b[1;2m(\u001b[0m\u001b[2m+\u001b[0m\u001b[1;2;39m00:00\u001b[0m\u001b[1;2m)\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 17,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:10)</span> <span style=\"color: #008080; text-decoration-color: #008080; font-weight: bold\">[START]</span> <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">LiteRT-Torch Convert</span> &gt; <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">Lower to MLIR: serving_default</span> &gt; <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">Create MLIR Module</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:10\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;36m[\u001b[0m\u001b[1;36mSTART\u001b[0m\u001b[1;36m]\u001b[0m \u001b[1;39mLiteRT-Torch Convert\u001b[0m > \u001b[1;39mLower to MLIR: serving_default\u001b[0m > \u001b[1;39mCreate MLIR Module\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 18,
+          "output": {
+            "name": "stderr",
+            "output_type": "stream",
+            "text": [
+              "WARNING:jax._src.xla_bridge:An NVIDIA GPU may be present on this machine, but a CUDA-enabled jaxlib is not installed. Falling back to cpu.\n"
+            ]
+          }
+        },
+        {
+          "output_index": 19,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:13)</span> <span style=\"color: #008000; text-decoration-color: #008000; font-weight: bold\">[ DONE]</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">LiteRT-Torch Convert</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\"> &gt; </span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">Lower to MLIR: serving_default</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\"> &gt; </span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">Create MLIR Module</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\">+</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">00:03</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">)</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:13\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;32m[\u001b[0m\u001b[1;32m DONE\u001b[0m\u001b[1;32m]\u001b[0m \u001b[1;2;39mLiteRT-Torch Convert\u001b[0m\u001b[2m > \u001b[0m\u001b[1;2;39mLower to MLIR: serving_default\u001b[0m\u001b[2m > \u001b[0m\u001b[1;2;39mCreate MLIR Module\u001b[0m \u001b[1;2m(\u001b[0m\u001b[2m+\u001b[0m\u001b[1;2;39m00:03\u001b[0m\u001b[1;2m)\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 20,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:13)</span> <span style=\"color: #008000; text-decoration-color: #008000; font-weight: bold\">[ DONE]</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">LiteRT-Torch Convert</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\"> &gt; </span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">Lower to MLIR: serving_default</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\">+</span><span style=\"color: #808000; text-decoration-color: #808000; font-weight: bold\">00:07</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">)</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:13\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;32m[\u001b[0m\u001b[1;32m DONE\u001b[0m\u001b[1;32m]\u001b[0m \u001b[1;2;39mLiteRT-Torch Convert\u001b[0m\u001b[2m > \u001b[0m\u001b[1;2;39mLower to MLIR: serving_default\u001b[0m \u001b[1;2m(\u001b[0m\u001b[2m+\u001b[0m\u001b[1;33m00:07\u001b[0m\u001b[1;2m)\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 21,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:13)</span> <span style=\"color: #008080; text-decoration-color: #008080; font-weight: bold\">[START]</span> <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">LiteRT-Torch Convert</span> &gt; <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">Merge MLIR Modules</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:13\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;36m[\u001b[0m\u001b[1;36mSTART\u001b[0m\u001b[1;36m]\u001b[0m \u001b[1;39mLiteRT-Torch Convert\u001b[0m > \u001b[1;39mMerge MLIR Modules\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 22,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:13)</span> <span style=\"color: #008000; text-decoration-color: #008000; font-weight: bold\">[ DONE]</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">LiteRT-Torch Convert</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\"> &gt; </span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">Merge MLIR Modules</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\">+</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">00:00</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">)</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:13\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;32m[\u001b[0m\u001b[1;32m DONE\u001b[0m\u001b[1;32m]\u001b[0m \u001b[1;2;39mLiteRT-Torch Convert\u001b[0m\u001b[2m > \u001b[0m\u001b[1;2;39mMerge MLIR Modules\u001b[0m \u001b[1;2m(\u001b[0m\u001b[2m+\u001b[0m\u001b[1;2;39m00:00\u001b[0m\u001b[1;2m)\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 23,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:13)</span> <span style=\"color: #008080; text-decoration-color: #008080; font-weight: bold\">[START]</span> <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">LiteRT-Torch Convert</span> &gt; <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">Run LiteRT Converter Passes</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:13\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;36m[\u001b[0m\u001b[1;36mSTART\u001b[0m\u001b[1;36m]\u001b[0m \u001b[1;39mLiteRT-Torch Convert\u001b[0m > \u001b[1;39mRun LiteRT Converter Passes\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 24,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:14)</span> <span style=\"color: #008000; text-decoration-color: #008000; font-weight: bold\">[ DONE]</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">LiteRT-Torch Convert</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\"> &gt; </span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">Run LiteRT Converter Passes</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\">+</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">00:00</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">)</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:14\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;32m[\u001b[0m\u001b[1;32m DONE\u001b[0m\u001b[1;32m]\u001b[0m \u001b[1;2;39mLiteRT-Torch Convert\u001b[0m\u001b[2m > \u001b[0m\u001b[1;2;39mRun LiteRT Converter Passes\u001b[0m \u001b[1;2m(\u001b[0m\u001b[2m+\u001b[0m\u001b[1;2;39m00:00\u001b[0m\u001b[1;2m)\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 25,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:14)</span> <span style=\"color: #008000; text-decoration-color: #008000; font-weight: bold\">[ DONE]</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">LiteRT-Torch Convert</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\">+</span><span style=\"color: #808000; text-decoration-color: #808000; font-weight: bold\">00:14</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">)</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:14\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;32m[\u001b[0m\u001b[1;32m DONE\u001b[0m\u001b[1;32m]\u001b[0m \u001b[1;2;39mLiteRT-Torch Convert\u001b[0m \u001b[1;2m(\u001b[0m\u001b[2m+\u001b[0m\u001b[1;33m00:14\u001b[0m\u001b[1;2m)\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 26,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:00)</span> <span style=\"color: #008080; text-decoration-color: #008080; font-weight: bold\">[START]</span> <span style=\"color: #000000; text-decoration-color: #000000; font-weight: bold\">Write Model to tflite_models/model_fp32.tflite</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:00\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;36m[\u001b[0m\u001b[1;36mSTART\u001b[0m\u001b[1;36m]\u001b[0m \u001b[1;39mWrite Model to tflite_models/model_fp32.tflite\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 27,
+          "output": {
+            "name": "stderr",
+            "output_type": "stream",
+            "text": [
+              "WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n",
+              "I0000 00:00:1789477708.343545     198 flatbuffer_export.cc:4342] Estimated count of arithmetic ops: 1.071 G  ops, equivalently 0.535 G  MACs\n"
+            ]
+          }
+        },
+        {
+          "output_index": 28,
+          "output": {
+            "data": {
+              "text/html": [
+                "<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(00:00)</span> <span style=\"color: #008000; text-decoration-color: #008000; font-weight: bold\">[ DONE]</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">Write Model to tflite_models/model_fp32.tflite</span> <span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">(</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f\">+</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">00:00</span><span style=\"color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold\">)</span>\n",
+                "</pre>\n"
+              ],
+              "text/plain": [
+                "\u001b[1;2;39m(\u001b[0m\u001b[1;2;39m00:00\u001b[0m\u001b[1;2;39m)\u001b[0m \u001b[1;32m[\u001b[0m\u001b[1;32m DONE\u001b[0m\u001b[1;32m]\u001b[0m \u001b[1;2;39mWrite Model to tflite_models/model_fp32.tflite\u001b[0m \u001b[1;2m(\u001b[0m\u001b[2m+\u001b[0m\u001b[1;2;39m00:00\u001b[0m\u001b[1;2m)\u001b[0m\n"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 29,
+          "output": {
+            "name": "stdout",
+            "output_type": "stream",
+            "text": [
+              "FP32: 4.33 MB\n"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cell_index": 26,
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "name": "stderr",
+            "output_type": "stream",
+            "text": [
+              "/opt/conda/lib/python3.11/site-packages/ai_edge_litert/interpreter.py:480: UserWarning: Warning: Enabling `experimental_preserve_all_tensors` with the BUILTIN or AUTO op resolver is intended for debugging purposes only. Be aware that this can significantly increase memory usage by storing all intermediate tensors. If you encounter memory problems or are not actively debugging, consider disabling this option.\n",
+              "  warnings.warn(\n",
+              "INFO: Created TensorFlow Lite XNNPACK delegate for CPU.\n",
+              "Generating Quantization Parameters:: 100%|██████████| 678/678 [00:00<00:00, 9476.41it/s]\n",
+              "Applying Transformations to tensors:: 100%|██████████| 920/920 [00:00<00:00, 32048.70it/s]\n"
+            ]
+          }
+        },
+        {
+          "output_index": 1,
+          "output": {
+            "name": "stdout",
+            "output_type": "stream",
+            "text": [
+              "Model name: tflite_models/model_fp32.tflite\n",
+              "Original model size: 4.33 MiB\n",
+              "Quantized model size: 1.89 MiB\n",
+              "Quantization Ratio: 0.44 (2.3x smaller)\n",
+              "Total time: 173.47 ms\n",
+              "model_int8a16.tflite: 1.89 MB\n"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cell_index": 27,
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "name": "stderr",
+            "output_type": "stream",
+            "text": [
+              "Generating Quantization Parameters:: 100%|██████████| 678/678 [00:00<00:00, 9111.57it/s]\n",
+              "Applying Transformations to tensors:: 100%|██████████| 920/920 [00:00<00:00, 34846.48it/s]\n"
+            ]
+          }
+        },
+        {
+          "output_index": 1,
+          "output": {
+            "name": "stdout",
+            "output_type": "stream",
+            "text": [
+              "Model name: tflite_models/model_fp32.tflite\n",
+              "Original model size: 4.33 MiB\n",
+              "Quantized model size: 1.83 MiB\n",
+              "Quantization Ratio: 0.42 (2.4x smaller)\n",
+              "Total time: 168.29 ms\n",
+              "model_int8.tflite: 1.83 MB\n"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cell_index": 29,
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "name": "stdout",
+            "output_type": "stream",
+            "text": [
+              "model_fp32.tflite\n",
+              "Input:  [  1   3 256 256] <class 'numpy.float32'>\n",
+              "Output: [ 1 20] <class 'numpy.float32'>\n",
+              "Size:   4.33 MB\n",
+              "model_int8a16.tflite\n",
+              "Input:  [  1   3 256 256] <class 'numpy.int16'>\n",
+              "Output: [ 1 20] <class 'numpy.int16'>\n",
+              "Size:   1.89 MB\n",
+              "model_int8.tflite\n",
+              "Input:  [  1   3 256 256] <class 'numpy.int8'>\n",
+              "Output: [ 1 20] <class 'numpy.int8'>\n",
+              "Size:   1.83 MB\n"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cell_index": 31,
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "name": "stdout",
+            "output_type": "stream",
+            "text": [
+              "\n",
+              "model_fp32.tflite\n",
+              "Accuracy: 0.9738\n",
+              "\n",
+              "                        precision    recall  f1-score   support\n",
+              "\n",
+              "        Aglais_Urticae     1.0000    0.9630    0.9811        27\n",
+              "Anthocharis_Cardamines     1.0000    0.9556    0.9773        45\n",
+              "          Apatura_Iris     1.0000    1.0000    1.0000        35\n",
+              "       Argynnis_Paphia     1.0000    1.0000    1.0000        40\n",
+              "      Colias_Myrmidone     1.0000    0.8929    0.9434        28\n",
+              "     Gonepteryx_Rhamni     0.8519    1.0000    0.9200        23\n",
+              "            Inachis_Io     0.9333    1.0000    0.9655        28\n",
+              " Iphiclides_Podalirius     0.9667    1.0000    0.9831        29\n",
+              "    Lycaena_Virgaureae     1.0000    1.0000    1.0000        17\n",
+              "            Lycaenidae     0.9535    1.0000    0.9762        41\n",
+              "       Maniola_Jurtina     0.9756    0.9756    0.9756        41\n",
+              "   Melanargia_Galathea     0.9756    0.9756    0.9756        41\n",
+              "     Nymphalis_Antiopa     1.0000    0.9375    0.9677        16\n",
+              "       Papilio_Machaon     1.0000    1.0000    1.0000        24\n",
+              "     Parnassius_Apollo     0.9677    0.9677    0.9677        31\n",
+              "          Pieris_Rapae     0.9722    0.9459    0.9589        37\n",
+              "     Polygonia_C-album     1.0000    1.0000    1.0000        40\n",
+              "      Vanessa_Atalanta     0.9556    0.9149    0.9348        47\n",
+              "        Vanessa_Cardui     0.9697    0.9697    0.9697        33\n",
+              "    Zerynthia_Polyxena     0.9615    1.0000    0.9804        25\n",
+              "\n",
+              "              accuracy                         0.9738       648\n",
+              "             macro avg     0.9742    0.9749    0.9739       648\n",
+              "          weighted avg     0.9750    0.9738    0.9738       648\n",
+              "\n"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cell_index": 32,
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "name": "stdout",
+            "output_type": "stream",
+            "text": [
+              "\n",
+              "model_int8.tflite\n",
+              "Accuracy: 0.0957\n",
+              "\n",
+              "                        precision    recall  f1-score   support\n",
+              "\n",
+              "        Aglais_Urticae     0.0000    0.0000    0.0000        27\n",
+              "Anthocharis_Cardamines     0.0000    0.0000    0.0000        45\n",
+              "          Apatura_Iris     0.0000    0.0000    0.0000        35\n",
+              "       Argynnis_Paphia     0.6000    0.0750    0.1333        40\n",
+              "      Colias_Myrmidone     0.0000    0.0000    0.0000        28\n",
+              "     Gonepteryx_Rhamni     0.0000    0.0000    0.0000        23\n",
+              "            Inachis_Io     0.1158    0.3929    0.1789        28\n",
+              " Iphiclides_Podalirius     0.0656    1.0000    0.1231        29\n",
+              "    Lycaena_Virgaureae     1.0000    0.0588    0.1111        17\n",
+              "            Lycaenidae     0.1354    0.3171    0.1898        41\n",
+              "       Maniola_Jurtina     1.0000    0.0488    0.0930        41\n",
+              "   Melanargia_Galathea     1.0000    0.0244    0.0476        41\n",
+              "     Nymphalis_Antiopa     0.0000    0.0000    0.0000        16\n",
+              "       Papilio_Machaon     0.0000    0.0000    0.0000        24\n",
+              "     Parnassius_Apollo     1.0000    0.0645    0.1212        31\n",
+              "          Pieris_Rapae     0.0000    0.0000    0.0000        37\n",
+              "     Polygonia_C-album     0.0000    0.0000    0.0000        40\n",
+              "      Vanessa_Atalanta     0.0000    0.0000    0.0000        47\n",
+              "        Vanessa_Cardui     0.0000    0.0000    0.0000        33\n",
+              "    Zerynthia_Polyxena     0.0000    0.0000    0.0000        25\n",
+              "\n",
+              "              accuracy                         0.0957       648\n",
+              "             macro avg     0.2458    0.0991    0.0499       648\n",
+              "          weighted avg     0.2542    0.0957    0.0511       648\n",
+              "\n"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cell_index": 33,
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "name": "stdout",
+            "output_type": "stream",
+            "text": [
+              "\n",
+              "model_int8a16.tflite\n",
+              "Accuracy: 0.9676\n",
+              "\n",
+              "                        precision    recall  f1-score   support\n",
+              "\n",
+              "        Aglais_Urticae     1.0000    0.9259    0.9615        27\n",
+              "Anthocharis_Cardamines     1.0000    0.9556    0.9773        45\n",
+              "          Apatura_Iris     1.0000    1.0000    1.0000        35\n",
+              "       Argynnis_Paphia     0.9756    1.0000    0.9877        40\n",
+              "      Colias_Myrmidone     1.0000    0.8929    0.9434        28\n",
+              "     Gonepteryx_Rhamni     0.8519    1.0000    0.9200        23\n",
+              "            Inachis_Io     0.9655    1.0000    0.9825        28\n",
+              " Iphiclides_Podalirius     0.9667    1.0000    0.9831        29\n",
+              "    Lycaena_Virgaureae     1.0000    1.0000    1.0000        17\n",
+              "            Lycaenidae     0.9318    1.0000    0.9647        41\n",
+              "       Maniola_Jurtina     1.0000    0.9756    0.9877        41\n",
+              "   Melanargia_Galathea     0.9756    0.9756    0.9756        41\n",
+              "     Nymphalis_Antiopa     1.0000    0.9375    0.9677        16\n",
+              "       Papilio_Machaon     1.0000    0.9167    0.9565        24\n",
+              "     Parnassius_Apollo     0.9677    0.9677    0.9677        31\n",
+              "          Pieris_Rapae     0.9459    0.9459    0.9459        37\n",
+              "     Polygonia_C-album     1.0000    0.9750    0.9873        40\n",
+              "      Vanessa_Atalanta     0.9348    0.9149    0.9247        47\n",
+              "        Vanessa_Cardui     0.9412    0.9697    0.9552        33\n",
+              "    Zerynthia_Polyxena     0.9259    1.0000    0.9615        25\n",
+              "\n",
+              "              accuracy                         0.9676       648\n",
+              "             macro avg     0.9691    0.9677    0.9675       648\n",
+              "          weighted avg     0.9692    0.9676    0.9677       648\n",
+              "\n"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cell_index": 34,
+      "execution_count": 29,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "name": "stdout",
+            "output_type": "stream",
+            "text": [
+              "\n",
+              "model_fp32.tflite\n",
+              "inference_input_type:  <class 'numpy.float32'>\n",
+              "inference_output_type: <class 'numpy.float32'>\n",
+              "input quantization:     (0.0, 0)\n",
+              "output quantization:    (0.0, 0)\n",
+              "\n",
+              "model_int8a16.tflite\n",
+              "inference_input_type:  <class 'numpy.int16'>\n",
+              "inference_output_type: <class 'numpy.int16'>\n",
+              "input quantization:     (3.0361909011844546e-05, 0)\n",
+              "output quantization:    (0.00018518586875870824, 0)\n",
+              "\n",
+              "model_int8.tflite\n",
+              "inference_input_type:  <class 'numpy.int8'>\n",
+              "inference_output_type: <class 'numpy.int8'>\n",
+              "input quantization:     (0.003901445772498846, -128)\n",
+              "output quantization:    (0.030398141592741013, -73)\n"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

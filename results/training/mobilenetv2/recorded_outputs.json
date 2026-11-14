@@ -1,0 +1,392 @@
+{
+  "source_notebook": "butterflies_austria_edge_vision/pytorch_mobilevit_xxs/MobileNetV2/butterflies_austria_MobileNetv2/butterflies_austria_MobileNetv2.ipynb",
+  "source_sha256": "0ec9de65e4c6ae80ee9ceab23a9ec24abc0a428cda9b4e47f1c590aabc12e0f6",
+  "operation": "extract_saved_text_outputs",
+  "description": "Previously stored textual/JSON notebook outputs; no cells executed and no metrics recomputed. Image and widget payloads omitted. Cell and output indices are zero-based.",
+  "cells": [
+    {
+      "cell_index": 0,
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "name": "stderr",
+            "output_type": "stream",
+            "text": [
+              "Skipping import of cpp extensions due to incompatible torch version. Please upgrade to torch >= 2.11.0 (found 2.10.0+cu128).\n"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cell_index": 1,
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "name": "stdout",
+            "output_type": "stream",
+            "text": [
+              "/home/jovyan/work/UFSC/butterflies_austria/pytorch_mobilevit_xxs/MobileNetV2/butterflies_austria_MobileNetv2\n"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cell_index": 3,
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "name": "stdout",
+            "output_type": "stream",
+            "text": [
+              "Device: cuda\n"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cell_index": 7,
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "name": "stdout",
+            "output_type": "stream",
+            "text": [
+              "Classes: 20\n",
+              "Train: 5183 | Val: 648 | Test: 648\n"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cell_index": 8,
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "name": "stdout",
+            "output_type": "stream",
+            "text": [
+              "Training distribution:\n",
+              "  Aglais_Urticae                : 215\n",
+              "  Anthocharis_Cardamines        : 361\n",
+              "  Apatura_Iris                  : 279\n",
+              "  Argynnis_Paphia               : 316\n",
+              "  Colias_Myrmidone              : 227\n",
+              "  Gonepteryx_Rhamni             : 186\n",
+              "  Inachis_Io                    : 218\n",
+              "  Iphiclides_Podalirius         : 238\n",
+              "  Lycaena_Virgaureae            : 137\n",
+              "  Lycaenidae                    : 332\n",
+              "  Maniola_Jurtina               : 326\n",
+              "  Melanargia_Galathea           : 328\n",
+              "  Nymphalis_Antiopa             : 128\n",
+              "  Papilio_Machaon               : 194\n",
+              "  Parnassius_Apollo             : 247\n",
+              "  Pieris_Rapae                  : 294\n",
+              "  Polygonia_C-album             : 317\n",
+              "  Vanessa_Atalanta              : 379\n",
+              "  Vanessa_Cardui                : 266\n",
+              "  Zerynthia_Polyxena            : 195\n"
+            ]
+          }
+        },
+        {
+          "output_index": 1,
+          "output": {
+            "data": {
+              "text/plain": [
+                "<Figure size 1200x500 with 1 Axes>"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 2,
+          "output": {
+            "name": "stdout",
+            "output_type": "stream",
+            "text": [
+              "Class weights: [1.0633659362792969, 0.8206319212913513, 0.9334689974784851, 0.8771188855171204, 1.0348777770996094, 1.1432613134384155, 1.0560239553451538, 1.0106796026229858, 1.3321149349212646, 0.8557224869728088, 0.8635613322257996, 0.8609245419502258, 1.3781516551971436, 1.1194407939910889, 0.9920955896377563, 0.9093442559242249, 0.8757343292236328, 0.800907552242279, 0.9560072422027588, 1.116566777229309]\n"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cell_index": 9,
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "data": {
+              "text/plain": [
+                "<Figure size 1000x1000 with 9 Axes>"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 1,
+          "output": {
+            "data": {
+              "text/plain": [
+                "<Figure size 1000x1000 with 9 Axes>"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 2,
+          "output": {
+            "data": {
+              "text/plain": [
+                "<Figure size 1000x1000 with 9 Axes>"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        }
+      ]
+    },
+    {
+      "cell_index": 11,
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "data": {
+              "text/plain": [
+                "model.safetensors: reconstructing file:   0%|          |  0.00B / 14.2MB            "
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 1,
+          "output": {
+            "data": {
+              "text/plain": [
+                "model.safetensors: downloading bytes:           |  0.00B            "
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        }
+      ]
+    },
+    {
+      "cell_index": 12,
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "name": "stdout",
+            "output_type": "stream",
+            "text": [
+              "Total Parameters: 2,249,492\n"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cell_index": 15,
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "name": "stdout",
+            "output_type": "stream",
+            "text": [
+              "Starting training...\n"
+            ]
+          }
+        },
+        {
+          "output_index": 1,
+          "output": {
+            "data": {
+              "text/plain": [
+                "Training Progress:   0%|          | 0/40 [00:00<?, ?it/s]"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        },
+        {
+          "output_index": 2,
+          "output": {
+            "name": "stdout",
+            "output_type": "stream",
+            "text": [
+              "[001/40] train_loss=4.7116 train_acc=0.0459 | val_loss=4.1047 val_acc=0.0509 | lr=2.69e-06\n",
+              "[002/40] train_loss=4.3970 train_acc=0.0585 | val_loss=3.6509 val_acc=0.0617 | lr=7.65e-06\n",
+              "[003/40] train_loss=3.7875 train_acc=0.1086 | val_loss=2.9720 val_acc=0.1651 | lr=1.55e-05\n",
+              "[004/40] train_loss=2.8506 train_acc=0.2537 | val_loss=2.0662 val_acc=0.4213 | lr=2.58e-05\n",
+              "[005/40] train_loss=1.9385 train_acc=0.4889 | val_loss=1.2969 val_acc=0.6806 | lr=3.78e-05\n",
+              "[006/40] train_loss=1.2923 train_acc=0.7021 | val_loss=0.9156 val_acc=0.8287 | lr=5.06e-05\n",
+              "[007/40] train_loss=0.9765 train_acc=0.8179 | val_loss=0.7627 val_acc=0.8981 | lr=6.34e-05\n",
+              "[008/40] train_loss=0.7916 train_acc=0.8767 | val_loss=0.6723 val_acc=0.9259 | lr=7.53e-05\n",
+              "[009/40] train_loss=0.6987 train_acc=0.9074 | val_loss=0.6328 val_acc=0.9414 | lr=8.56e-05\n",
+              "[010/40] train_loss=0.6071 train_acc=0.9396 | val_loss=0.5795 val_acc=0.9475 | lr=9.34e-05\n",
+              "[011/40] train_loss=0.5674 train_acc=0.9523 | val_loss=0.5589 val_acc=0.9568 | lr=9.84e-05\n",
+              "[012/40] train_loss=0.5238 train_acc=0.9680 | val_loss=0.5459 val_acc=0.9506 | lr=1.00e-04\n",
+              "[013/40] train_loss=0.4940 train_acc=0.9747 | val_loss=0.5278 val_acc=0.9583 | lr=9.97e-05\n",
+              "[014/40] train_loss=0.4689 train_acc=0.9815 | val_loss=0.5132 val_acc=0.9599 | lr=9.87e-05\n",
+              "[015/40] train_loss=0.4593 train_acc=0.9859 | val_loss=0.5044 val_acc=0.9707 | lr=9.72e-05\n",
+              "[016/40] train_loss=0.4419 train_acc=0.9882 | val_loss=0.4948 val_acc=0.9660 | lr=9.50e-05\n",
+              "[017/40] train_loss=0.4351 train_acc=0.9907 | val_loss=0.4955 val_acc=0.9630 | lr=9.23e-05\n",
+              "[018/40] train_loss=0.4246 train_acc=0.9940 | val_loss=0.4983 val_acc=0.9645 | lr=8.90e-05\n",
+              "[019/40] train_loss=0.4206 train_acc=0.9929 | val_loss=0.4868 val_acc=0.9707 | lr=8.53e-05\n",
+              "[020/40] train_loss=0.4102 train_acc=0.9959 | val_loss=0.4796 val_acc=0.9645 | lr=8.11e-05\n",
+              "[021/40] train_loss=0.4101 train_acc=0.9959 | val_loss=0.4796 val_acc=0.9660 | lr=7.65e-05\n",
+              "[022/40] train_loss=0.4034 train_acc=0.9971 | val_loss=0.4761 val_acc=0.9691 | lr=7.16e-05\n",
+              "[023/40] train_loss=0.4013 train_acc=0.9975 | val_loss=0.4728 val_acc=0.9722 | lr=6.65e-05\n",
+              "[024/40] train_loss=0.3983 train_acc=0.9975 | val_loss=0.4709 val_acc=0.9707 | lr=6.11e-05\n",
+              "[025/40] train_loss=0.3993 train_acc=0.9965 | val_loss=0.4668 val_acc=0.9707 | lr=5.55e-05\n",
+              "[026/40] train_loss=0.3917 train_acc=0.9985 | val_loss=0.4634 val_acc=0.9769 | lr=4.99e-05\n",
+              "[027/40] train_loss=0.3922 train_acc=0.9983 | val_loss=0.4579 val_acc=0.9722 | lr=4.43e-05\n",
+              "[028/40] train_loss=0.3913 train_acc=0.9979 | val_loss=0.4600 val_acc=0.9738 | lr=3.88e-05\n",
+              "[029/40] train_loss=0.3881 train_acc=0.9985 | val_loss=0.4614 val_acc=0.9738 | lr=3.34e-05\n",
+              "[030/40] train_loss=0.3876 train_acc=0.9986 | val_loss=0.4598 val_acc=0.9738 | lr=2.83e-05\n",
+              "[031/40] train_loss=0.3863 train_acc=0.9992 | val_loss=0.4597 val_acc=0.9660 | lr=2.33e-05\n",
+              "[032/40] train_loss=0.3857 train_acc=0.9986 | val_loss=0.4584 val_acc=0.9738 | lr=1.88e-05\n",
+              "[033/40] train_loss=0.3854 train_acc=0.9992 | val_loss=0.4563 val_acc=0.9738 | lr=1.46e-05\n",
+              "[034/40] train_loss=0.3846 train_acc=0.9990 | val_loss=0.4565 val_acc=0.9722 | lr=1.09e-05\n",
+              "Early stopping triggered at epoch 34.\n",
+              "Best validation accuracy: 0.9769\n"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cell_index": 17,
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "name": "stdout",
+            "output_type": "stream",
+            "text": [
+              "Final test accuracy: 0.9707\n"
+            ]
+          }
+        },
+        {
+          "output_index": 1,
+          "output": {
+            "data": {
+              "text/plain": [
+                "<Figure size 1200x400 with 2 Axes>"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        }
+      ]
+    },
+    {
+      "cell_index": 18,
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "data": {
+              "text/plain": [
+                "<Figure size 1500x1600 with 20 Axes>"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        }
+      ]
+    },
+    {
+      "cell_index": 19,
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_index": 0,
+          "output": {
+            "name": "stdout",
+            "output_type": "stream",
+            "text": [
+              "                        precision    recall  f1-score   support\n",
+              "\n",
+              "        Aglais_Urticae     1.0000    0.9630    0.9811        27\n",
+              "Anthocharis_Cardamines     1.0000    0.9556    0.9773        45\n",
+              "          Apatura_Iris     0.9722    1.0000    0.9859        35\n",
+              "       Argynnis_Paphia     1.0000    1.0000    1.0000        40\n",
+              "      Colias_Myrmidone     1.0000    0.9286    0.9630        28\n",
+              "     Gonepteryx_Rhamni     0.8800    0.9565    0.9167        23\n",
+              "            Inachis_Io     0.9643    0.9643    0.9643        28\n",
+              " Iphiclides_Podalirius     1.0000    1.0000    1.0000        29\n",
+              "    Lycaena_Virgaureae     0.9412    0.9412    0.9412        17\n",
+              "            Lycaenidae     0.9756    0.9756    0.9756        41\n",
+              "       Maniola_Jurtina     1.0000    0.9512    0.9750        41\n",
+              "   Melanargia_Galathea     0.9762    1.0000    0.9880        41\n",
+              "     Nymphalis_Antiopa     1.0000    0.9375    0.9677        16\n",
+              "       Papilio_Machaon     1.0000    1.0000    1.0000        24\n",
+              "     Parnassius_Apollo     1.0000    0.9355    0.9667        31\n",
+              "          Pieris_Rapae     0.9024    1.0000    0.9487        37\n",
+              "     Polygonia_C-album     0.9744    0.9500    0.9620        40\n",
+              "      Vanessa_Atalanta     0.9362    0.9362    0.9362        47\n",
+              "        Vanessa_Cardui     0.9429    1.0000    0.9706        33\n",
+              "    Zerynthia_Polyxena     0.9615    1.0000    0.9804        25\n",
+              "\n",
+              "              accuracy                         0.9707       648\n",
+              "             macro avg     0.9713    0.9698    0.9700       648\n",
+              "          weighted avg     0.9719    0.9707    0.9708       648\n",
+              "\n"
+            ]
+          }
+        },
+        {
+          "output_index": 1,
+          "output": {
+            "data": {
+              "text/plain": [
+                "<Figure size 2000x1600 with 2 Axes>"
+              ]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+          }
+        }
+      ]
+    }
+  ]
+}
