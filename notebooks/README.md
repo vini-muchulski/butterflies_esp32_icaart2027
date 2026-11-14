@@ -6,20 +6,20 @@ This directory collects the experiment notebooks supporting the comparison of pr
 
 | Stage | Notebook | Purpose |
 |---|---|---|
-| Training | [MobileNetV2 baseline](01_training/mobilenetv2/butterflies_austria_MobileNetv2.ipynb) | Fine-tuning, test evaluation, and initial TFLite conversions. |
-| Training | [MobileViT-XXS baseline](01_training/mobilevit_xxs/butterflies_austria_MobileVIT_apple_baseline_v0.ipynb) | Fine-tuning, test evaluation, and initial TFLite conversions. |
-| Export | [MobileNetV2 explicit pooling](02_export/mobilenetv2/butterflies_austria_MobileNetv2_avgpool_export.ipynb) | Export with explicit average pooling and host-side resolver comparisons. |
-| Export | [MobileNetV2 deployment verification](02_export/mobilenetv2/butterflies_austria_MobileNetv2.ipynb) | Training/export workflow with checks intended for ESP32-S3 deployment. |
-| Export | [MobileViT-XXS deployment verification](02_export/mobilevit_xxs/butterflies_austria_MobileVIT_apple_baseline_v2_esp_verify.ipynb) | Activation diagnosis, initial structural grouping, and export checks. |
-| Structural comparison | [MobileViT-XXS configuration comparison](03_structural_comparison/artigo_experimentos_MobileVIT_v4.ipynb) | Seventeen grouping configurations, validation-based selection, and exploratory test evaluation. |
-| Statistical analysis | [Paired statistical analysis](04_statistical_analysis/mcnemar_teste.ipynb) | Paired TFLite predictions, Wilson intervals, bootstrap differences, exact McNemar tests, and Holm adjustment. |
-| Figures | [Diagnostic and result figures](05_figures/gerar_plots_para_o_artigo.ipynb) | Activation/weight diagnostics, grouping comparisons, and accuracy-recovery plots. |
+| Training | [MobileNetV2 baseline](01_training/mobilenetv2/mobilenetv2_training.ipynb) | Fine-tuning, test evaluation, and initial TFLite conversions. |
+| Training | [MobileViT-XXS baseline](01_training/mobilevit_xxs/mobilevit_xxs_training.ipynb) | Fine-tuning, test evaluation, and initial TFLite conversions. |
+| Export | [MobileNetV2 explicit pooling](02_export/mobilenetv2/mobilenetv2_average_pool_export.ipynb) | Export with explicit average pooling and host-side resolver comparisons. |
+| Export | [MobileNetV2 deployment verification](02_export/mobilenetv2/mobilenetv2_export_verification.ipynb) | Training/export workflow with checks intended for ESP32-S3 deployment. |
+| Export | [MobileViT-XXS deployment verification](02_export/mobilevit_xxs/mobilevit_xxs_grouped_export_verification.ipynb) | Activation diagnosis, initial structural grouping, and export checks. |
+| Structural comparison | [MobileViT-XXS configuration comparison](03_structural_comparison/mobilevit_xxs_structural_comparison.ipynb) | Seventeen grouping configurations, validation-based selection, and exploratory test evaluation. |
+| Statistical analysis | [Paired statistical analysis](04_statistical_analysis/paired_statistical_analysis.ipynb) | Paired TFLite predictions, Wilson intervals, bootstrap differences, exact McNemar tests, and Holm adjustment. |
+| Figures | [Diagnostic and result figures](05_figures/generate_article_figures.ipynb) | Activation/weight diagnostics, grouping comparisons, and accuracy-recovery plots. |
 
-[Separate activation-diagnosis panels](05_figures/regerar_figure_1_activation_scale_diagnosis.py) is a companion Python script. It reads saved tables and generates the two activation-diagnosis panels without loading models or recalibrating.
+[Separate activation-diagnosis panels](05_figures/regenerate_activation_scale_diagnosis.py) is a companion Python script. It reads saved tables and generates the two activation-diagnosis panels without loading models or recalibrating.
 
 ## Current assembly status
 
-These are unchanged copies of the original files, including their stored outputs, execution counts, and metadata. [provenance.csv](provenance.csv) records the original workspace paths, destination paths relative to this directory, file sizes, and full SHA-256 hashes. Source paths document the original workspace layout; they are not dependencies to retrieve from this repository.
+The files use descriptive English names; their contents remain unchanged, including stored outputs, execution counts, and metadata. [provenance.csv](provenance.csv) records the original workspace paths, destination paths relative to this directory, file sizes, and full SHA-256 hashes. Source paths document the original workspace layout; they are not dependencies to retrieve from this repository.
 
 The copies have not been executed or adapted to this directory layout. Existing absolute paths, directory searches, and output locations may still refer to the original workspace. Review and adapt these paths before executing any cells, including paths that write results. Notebook outputs are historical records, not evidence of a new run in this repository.
 
